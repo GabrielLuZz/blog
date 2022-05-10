@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/home.css">
+
+    <script>
+        if (localStorage.length === 0) {
+            window.location.href = './src/pages/login.html'
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="modelos">
+        <article class="post" data-id="">
+            <section class="areaPicture">
+                <img src="" alt="">
+            </section>
+            <section class="areaInfo">
+                <h2></h2>
+                <p></p>
+            </section>
+            <section class="areaActions">
+                <span class="editar">Editar</span>
+                <span class="apagar">Apagar</span>
+                <span class="data"></span>
+            </section>
+        </article>
+
+        <div class="botaoArea">
+            <button class="botaoCancelar">Cancelar</button>
+            <button class="botaoEditar">Salvar</button>
+        </div>
+
+        <div class="modalFundo">
+            <div class="modal">
+                <h2>Tem certeza que deseja excluir este post?</h2>
+                <div class="modalAcoes">
+                    <button class="cancelarBotao">Cancelar</button>
+                    <button class="excluirBotao">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="avisos">
+
+    </div>
+
+    <header>
+        <div class="logo">
+            <img id="imagemPerfil" src="" alt="">
+            <h1 id="nomePerfil"></h1>
+        </div>
+
+        <button>Logout</button>
+
+    </header>
+
+    <main>
+        <section class="makePost">
+            <form action="">
+                <textarea name="body" placeholder="Comece seu post incrível!"></textarea>
+                <button>+</button>
+            </form>
+        </section>
+        <section class="areaPosts" data-page="">
+
+        </section>
+
+    </main>
+
+    <script type="module" src="src/controllers/HomeController.js"></script>
+</body>
+
+</html>
