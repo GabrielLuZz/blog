@@ -20,7 +20,7 @@ form.addEventListener('submit', async(e) => {
             localStorage.setItem('token', response.token)
             localStorage.setItem('userId', response.userId)
             setTimeout(() => {
-                window.location.href = 'http://127.0.0.1:5500/home.html'
+                window.location.href = '/index.html'
             }, 2000)
         }
     }
